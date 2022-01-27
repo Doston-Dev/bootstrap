@@ -28,7 +28,7 @@
   </style>
 </head>
 
-<body style="overflow-x: hidden;">
+<body>
   <!-- navbar -->
   <nav class="navbar navbar-expand-md navbar-light bg-light">
     <div class="container-xxl">
@@ -48,16 +48,16 @@
       <div class="collapse navbar-collapse justify-content-end align-center" id="navbarText">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" href="#topics">About The Book</a>
+            <a class="nav-link active" aria-current="page" href="#topics">About The Book</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#reviews">Reviews</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Get in Touch</a>
-          </li>
           <li class="nav-item d-md-none">
             <a class="nav-link" href="#pricing">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Get in Touch</a>
           </li>
           <li class="nav-item ms-2 d-none d-md-inline">
             <a class="btn btn-secondary" href="#pricing">Buy now</a>
@@ -70,7 +70,7 @@
   <!-- main image & intro text -->
   <section id="intro">
     <div class="container-lg">
-      <div class="row g-4 justify-content-center align-items-center">
+      <div class="row justify-content-center align-items-center">
         <div class="col-md-6 order-md-5">
           <!-- tooltip -->
           <span class="tt" data-bs-placement="bottom" title="DR Course 157 - Book">
@@ -87,7 +87,7 @@
           </p>
           <a href="#pricing" class="btn btn-secondary btn-lg">Buy Now</a>
           <!-- open sidebar / offcanvas -->
-          <a href="#sidebar" class="d-block mt-3" data-bs-toggle="offcanvas" role="button" aria-controls="sidebar">
+          <a class="lead d-block mt-3" data-bs-toggle="offcanvas" href="#sidebar" role="button" aria-controls="sidebar">
             Link with href
           </a>
         </div>
@@ -495,44 +495,34 @@
     </div>
   </div>
 
-  <!-- side panel / offcanvas -->
+  <!-- side panel / offcavans -->
   <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
     <div class="offcanvas-header">
       <h5 class="offcanvas-title" id="sidebar-label">My Other Books</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. In minima
-        ducimus excepturi quasi tempore fugit quis voluptatibus aut error
-        possimus, tenetur natus magni quam voluptatem quae eligendi
-        repudiandae delectus eaque!
-      </p>
-      <!-- dropdown -->
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur quos ipsa nihil, tempore nobis architecto. Cumque labore, nihil nulla laborum facere obcaecati, iusto eaque reprehenderit praesentium, quo earum maxime error?</p>
       <div class="dropdown mt-3">
-        <button class="btn btn-secondary dropdown-toggle" type="button" id="book-dropdown" data-bs-toggle="dropdown">
-          Choose a book title
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown">
+          Dropdown button
         </button>
-        <ul class="dropdown-menu" aria-labelledby="book-dropdown">
-          <li>
-            <a class="dropdown-item" href="#">Become a React Superhero</a>
-          </li>
-          <li><a class="dropdown-item" href="#">Conquering Vue.js</a></li>
-          <li>
-            <a class="dropdown-item" href="#">Levelling up Your Next.js</a>
-          </li>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <li><a class="dropdown-item" href="#">Action</a></li>
+          <li><a class="dropdown-item" href="#">Another action</a></li>
+          <li><a class="dropdown-item" href="#">Something else here</a></li>
         </ul>
       </div>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-  <script>
-    const tooltips = document.querySelectorAll(".tt");
-    tooltips.forEach((t) => {
-      new bootstrap.Tooltip(t);
-    });
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script>
+  const tooltips = document.querySelectorAll('.tt');
+  tooltips.forEach(t => {
+    new bootstrap.Tooltip(t);
+  });
+</script>
 </body>
 
 </html>
